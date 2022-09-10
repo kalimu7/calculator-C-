@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <conio.h>
+
 void Fact(float number){
     printf("please enter a value\n");
     scanf("%f",&number);
@@ -13,28 +15,28 @@ void Fact(float number){
 void add(float a,float b){
     printf("entrer the first number\n");
     scanf("%f",&a);
-    printf("entrer the first number\n");
+    printf("entrer the second number\n");
     scanf("%f",&b);
     printf("%.2f + %.2f = %.2f",a,b,a+b);
 }
 void sub(float a,float b){
     printf("entrer the first number\n");
     scanf("%f",&a);
-    printf("entrer the first number\n");
+    printf("entrer the second number\n");
     scanf("%f",&b);
     printf("%.2f - %.2f = %.2f",a,b,a-b);
 }
 void mul(float a,float b){
     printf("entrer the first number\n");
     scanf("%f",&a);
-    printf("entrer the first number\n");
+    printf("entrer the second number\n");
     scanf("%f",&b);
     printf("%.2f X %.2f = %.2f",a,b,a*b);
 }
 void Div(float a,float b){
     printf("entrer the first number\n");
     scanf("%f",&a);
-    printf("entrer the first number\n");
+    printf("entrer the second number\n");
     scanf("%f",&b);
     if(b==0){
     printf("you cant devid by 0");
@@ -45,14 +47,19 @@ void Div(float a,float b){
 void modulo(int a,int b){
     printf("entrer the first number\n");
     scanf("%d",&a);
-    printf("entrer the first number\n");
+    printf("entrer the second number\n");
     scanf("%d",&b);
+    if(b==0){
+        printf("you cant devid by 0\n");
+    }
+    else{
     printf("rest of %d by %d is %d",a,b,a%b);
+    }
 }
 void Pow(float a,float b){
     printf("entrer the first number\n");
     scanf("%f",&a);
-    printf("entrer the first number\n");
+    printf("entrer the second number\n");
     scanf("%f",&b);
     printf("%.2f ^ %.2f = %.2f",a,b,pow(a,b));
 
@@ -74,12 +81,10 @@ void Tan(float a){
 }
 int main()
 {
-
     float a,b;
     int choix;
     while(1<2){
     printf("\n------------------------------------------------------------------\n");
-
     printf("1. addition\n");
     printf("2. soustraction\n");
     printf("3. multiplication\n");
@@ -131,7 +136,9 @@ int main()
         printf("you did entred a wrong choice\n");
         break;
     }
+    printf("\nenter anything to clear\n");
+    getch();
+    system("cls");
     }
-
     return 0;
 }
